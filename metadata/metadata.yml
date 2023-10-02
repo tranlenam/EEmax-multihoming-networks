@@ -1,0 +1,18 @@
+metadata_version: 1
+name: Energy-Efficient Bandwidth and Power Allocation for Multi-homing Networks
+description: Simulation codes for "Energy-Efficient Bandwidth and Power Allocation
+  for Multi-homing Networks," by Quang-Doanh Vu, Le-Nam Tran, Markku Juntti, and Een-Kee
+  Hong, IEEE Trans. Signal Process., vol. 63, no. 7, pp. 1684-1699, Apr. 2015.
+authors:
+- name: Le-Nam Tran
+  affiliations:
+  - name: University College Dublin
+- name: Quang-Doanh Vu
+  affiliations:
+  - name: Kyung Hee University
+- name: Markku Juntti
+  affiliations:
+  - name: University of Oulu
+- name: Een-Kee Hong
+  affiliations:
+  - name: Kyung Hee University

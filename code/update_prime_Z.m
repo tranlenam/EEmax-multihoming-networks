@@ -1,0 +1,19 @@
+function [ZJ,ZI] = update_prime_Z(c,N,M ,zetai,zetaj,TJ,TI)
+AP = reshape(zetaj(2:N+1,:),[],1);
+AW = reshape(zetaj(N+2:end,:),[],1);
+AP1 = reshape(zetai(:,2:M+1),[],1);
+AW1 = reshape(zetai(:,M+2:end),[],1);
+VJ = TJ(1,:)';
+ZeJ =  zetaj(1,:)';
+P = reshape(TJ(2:N+1,:),[],1);
+W = reshape(TJ(N+2:end,:),[],1);
+VI = TI(:,1);
+ZeI =  zetai(:,1);
+P1 = reshape(TI(:,2:M+1),[],1);
+W1 = reshape(TI(:,M+2:end),[],1);
+
+U = 1/2*(P + P1 + 1/c*(AP +AP1));
+V  = 1/2*(W + W1 + 1/c*(AW +AW1));
+Va = 1/(c*(M+N))*(sum(ZeJ + c*VJ)+sum(ZeI+c*VI));
+ZJ = [Va*ones(1,M); reshape(U,N,M); reshape(V,N,M)];
+ZI = [Va*ones(N,1),reshape(U,N,M),reshape(V,N,M) ];
